@@ -1,0 +1,176 @@
+package sockethttpconvert.pb;
+
+option java_package = "com.xgama.sockethttpconvert.pb";
+option java_outer_classname = "UserValidateClass";
+
+// LH用户验证对象
+message LaoHuUser {
+  required int32 tmpUserID = 1;        // Unique ID number for this user.
+  required int32 userId = 2;
+  required int32 appId = 3;
+  required string token = 4;
+  required int32 t = 5;
+  required string sign = 6;
+  optional int32 channelId = 7;
+  optional int32 version = 8;
+}
+
+// 91用户验证对象
+message JYUser {
+  required int32 tmpUserID = 1;        // Unique ID number for this user.
+  required string AppID = 2;
+  required string AccessToken = 3;
+  required string Sign = 4;
+}
+
+// 当乐用户验证
+message DLUser {
+  required int32 tmpUserID = 1;        // Unique ID number for this user.
+  required int32 app_id = 2;
+  required int64 mid = 3;
+  required string token = 4;
+  required string sig = 5;
+}
+
+// 360oauth获取token
+message QHUser {
+  required int32 tmpUserID = 1;        // Unique ID number for this user.
+  required string grant_type = 2;
+  required string code = 3;
+  required string client_id = 4;
+  required string client_secret = 5;
+  required string redirect_uri = 6;
+}
+
+// PP登陆验证
+message PPUser {
+  required int32 tmpUserID = 1;       // Unique ID number for this user
+  required string token_key = 2;
+}
+
+// UC登录验证
+message UCUser {
+  required int32 tmpUserID = 1;
+  required int64 id = 2;
+  required string service = 3;
+  required string data = 4;
+  required string game = 5;
+  required string sign = 6;
+}
+
+// 小米登录验证
+message XMUser {
+  required int32 tmpUserID = 1;
+  required string appId = 2;
+  required string session = 3;
+  required string uid = 4;
+  required string signature = 5;
+}
+
+// 豌豆荚登录验证
+message WDJUser {
+  required int32 tmpUserID = 1;
+  required string uid = 2;
+  required string token = 3;
+  required string appkey_id = 4;
+}
+
+// 同步推登录验证
+message TBTUser {
+  required int32 tmpUserID = 1;
+  required string token = 2;
+}
+
+// 百度多酷登录验证
+message BDDKUser {
+  required int32 tmpUserID = 1;
+  required string AppID = 2;
+  required string AccessToken = 3;
+  required string Sign = 4;
+}
+
+// 安智登录验证
+message AZUser {
+  required int32 tmpUserID = 1;
+  required string time = 2;
+  required string appkey = 3;
+  required string sid = 4;
+  required string sign = 5;
+}
+
+// 登录验证结果
+message ValidateResult {
+  required int32 tmpUserID = 1;
+  required bool result = 2;
+  optional int64 userId = 3;
+  optional string uidStr = 4;
+}
+
+// 360 token 刷新结果
+message QHRefreshTokenResult {
+  required int32 tmpUserID = 1;
+  required string access_token = 2;
+  required string expires_in = 3;
+  required string scope = 4;
+  required string refresh_token = 5;
+}
+
+// 360 用户获取结果
+message QHGetUserResult {
+  required int32 tmpUserID = 1;
+  required string id = 2;
+  required string name = 3;
+  required string avatar = 4;
+  optional string sex = 5;
+  optional string area = 6;
+  optional string nick = 7;
+}
+
+// 360 token 刷新请求
+message QHRefreshToken {
+  required int32 tmpUserID = 1;
+  required string grant_type = 2;
+  required string refresh_token = 3;
+  required string client_id = 4;
+  required string client_secret = 5;
+  required string scope = 6;
+}
+
+// 360 用户获取
+message QHGetUser {
+  required int32 tmpUserID = 1;
+  required string access_token = 2;
+  optional string fields = 3;
+}
+
+// 快用登录验证
+message KYUser {
+  required int32 tmpUserID = 1;
+  required string tokenKey = 2;
+  required string sign = 3;
+}
+
+// 谷歌支付
+message GooglePay
+{
+  required string PayInfo = 1;
+  required string sign = 2;
+}
+
+// iTools 登录验证
+message IToolsUser
+{
+  required int32 tmpUserID = 1;         // Unique ID number for this user.
+  required string appid = 2;
+  required string sessionid = 3;
+  required string sign = 4;
+}
+
+// onesdk用户验证对象
+message OnesdkUser {
+  required int32 tmpUserID = 1;        // Unique ID number for this user.
+  required string userIdentity = 2;
+  required int64 appId = 3;
+  required string token = 4;
+  required string sign = 5;
+}
