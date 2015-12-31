@@ -1,9 +1,0 @@
-package sockethttpconvert.pb;
-
-option java_package = "com.xgama.sockethttpconvert.pb";
-option java_outer_classname = "HeartbeatClass";
-
-// 心跳包
-message Heartbeat{
-	required string appOrder = 1;   // 唯一标示
-}
