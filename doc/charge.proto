@@ -1,0 +1,269 @@
+package sockethttpconvert.pb;
+
+option java_package = "com.xgama.sockethttpconvert.pb";
+option java_outer_classname = "ChargeClass";
+
+// LH支付通知对象
+message LaoHuCharge {
+	required string appOrder = 1;   // 游戏订单号，全局唯一
+	required int64 userId = 2;
+	required int32 appId = 3;
+	required int64 pOrder = 4;
+	required int64 t = 5;
+	required int32 amount = 6;
+	required string payStatus = 7;
+	required string sign = 8;
+	optional int32 serverId = 9;
+	optional string ext = 10;
+}
+
+// 91支付通知对象
+message JYCharge {
+	required string appOrder = 1;   // 游戏订单号，全局唯一
+    required int32 AppID = 2;
+    required string OrderSerial = 3;
+    required string CooperatorOrderSerial = 4;
+    required string Sign = 5;
+    required string Content = 6;
+    optional string OrderMoney = 7;
+    optional string OrderStatus = 8;
+    optional string StartDateTime = 9; //yyyy-MM-ddHH:mm:ss
+}
+
+// 当乐支付通知
+message DLCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string result = 2;
+  required string money = 3;
+  required string order = 4;
+  required int64 mid = 5;
+  required string time = 6;
+  required string signature = 7;
+  required string ext = 8;
+}
+
+// 皮皮支付通知
+message PPCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string order_id = 2;
+  required string billno = 3;
+  required string account = 4;
+  required string amount = 5;
+  required string status = 6;
+  required string app_id = 7;
+  required string sign = 8;
+}
+
+// UC支付通知
+message UCCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string orderId = 2;
+  required string gameId = 3;
+  required string serverId = 4;
+  required string ucid = 5;
+  required string payWay = 6;
+  required string amount = 7;
+  required string callbackInfo = 8;
+  required string orderStatus = 9;
+  required string failedDesc = 10;
+  optional string roleId = 11;
+  optional int32 intfType = 12;
+  required string sign = 13;
+}
+
+// 小米支付通知
+message XMCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string appId = 2;
+  required string cpOrderId = 3;
+  required string uid = 4;
+  required string orderId = 5;
+  required string orderStatus = 6;
+  required string payFee = 7;
+  required string productCode = 8;
+  required string productName = 9;
+  required string productCount = 10;
+  optional string cpUserInfo = 11;
+  optional string payTime = 12;
+  optional string signature = 13;
+}
+
+// 豌豆荚支付通知
+message WDJCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string signType = 2;
+  required string sign = 3;
+  required string timeStamp = 4;
+  required string orderId = 5;
+  required string money = 6;
+  required string chargeType = 7;
+  required string appKeyId = 8;
+  required string buyerId = 9;
+  required string out_trade_no = 10;
+  optional string cardNo = 11;
+}
+
+// 同步推支付通知
+message TBTCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string source = 2;
+  required string trade_no = 3;
+  required string amount = 4;
+  required string partner = 5;
+  required string paydes = 6;
+  required string debug = 7;
+  required string sign  = 8;
+  optional string torder = 9;
+}
+
+// 奇虎支付通知
+message QHCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string app_key = 2;
+  required string product_id = 3;
+  required string amount = 4;
+  required string app_uid = 5;
+  required string order_id = 6;
+  required string sign_type = 7;
+  required string app_order_id = 8;
+  required string sign_return = 9;
+  required string sign = 10;
+  optional string user_id = 11;
+  optional string gateway_flag = 12;
+}
+
+// 百度多酷支付
+message BDDKCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required int32 AppID = 2;
+  required string OrderSerial = 3;
+  required string CooperatorOrderSerial = 4;
+  required string Sign = 5;
+  required string Content = 6;
+  optional string OrderMoney = 7;
+  optional string OrderStatus = 8;
+  optional string StartDateTime = 9; //yyyy-MM-ddHH:mm:ss
+}
+
+// 安智支付
+message AZCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string uid = 2;
+  required string orderId = 3;
+  required string orderAmount = 4;
+  required string orderTime = 5;
+  required string orderAccount = 6;
+  required string code = 7;
+  required string msg =8;
+  required string payAmount = 9;
+  required string cpInfo = 10;
+  required string notifyTime = 11;
+  optional string memo = 12;
+}
+
+// 天猫直冲，appOder为web工程自定义的uuid
+message TMCharge {
+  required string appOrder = 1;   // 游戏订单号，全局唯一
+  required string orderNo = 2;
+  required string roleId = 3;
+  required string goodId = 4;
+  required string goodNum = 5;
+  required string serverId = 6;
+  required string money = 7;  
+}
+  
+// 充值结果，result=1表示兑换成功
+message Result {
+  required string appOrder = 1;
+  required int32 result = 2;
+  optional string gameOrder = 3;
+}
+
+// 苹果支付
+message AppleCharge {
+  optional string appOrder = 1;   // 游戏订单号，全局唯一
+  required string receipt_data = 2;
+}
+
+// 苹果支付确认响应，status=0为成功，成功时optional字段有数据
+message AppleChargeResult {
+  optional string appOrder = 1;
+  required int32 status = 2;
+  optional string product_id = 3;
+  optional string transaction_id = 4;
+  optional string bid = 5;
+  optional string quantity = 6;
+  optional string item_id = 7;
+}
+
+// 快用支付
+message KYCharge {
+  required string appOrder = 1;      //  游戏订单号，全局唯一
+  required string notify_data = 2;   //  RSA加密的关键数据 
+  required string orderid = 3;       //  快用平台订单号
+  required string dealseq = 4;       //  游戏订单号，全局唯一
+  required string uid = 5;
+  required string subject = 6;
+  required string v = 7;
+  required string sign = 8;
+  required string payresult = 9;     //  支付结果
+  required string fee = 10;          //  支付金额
+}
+
+// 谷歌支付 Charge
+message GooglePayCharge
+{
+  required string appOrder = 1;
+  required string orderId =2;
+  required string productId = 3;
+}
+
+// iTools Charge
+message IToolsCharge
+{
+  required string appOrder = 1;    // 游戏订单号，全局唯一
+  required string order_id_com =2;
+  required string user_id = 3;
+  required string amount = 4;
+  required string account = 5;
+  required string order_id = 6;
+  required string result = 7;
+}
+
+// YY充值
+message YYCharge
+{
+  required string appOrder = 1;    // 游戏订单号，全局唯一
+  required int64 account = 2;      // 用户ID
+  required string orderid = 3;     // 多玩订单号
+  required string rmb = 4;         // 人民币
+  required int32 num = 5;          // 游戏币总数或者物品总数
+  required string type = 6;        // 充值渠道名称
+  required int64 time = 7;
+  required string game = 8;        // 游戏名称
+  required string server = 9;      // 合作方服务器名称
+  required string role = 10;       // 角色参数
+  required string itemid = 11;     // 物品id
+  required string price = 12;      // 物品单价
+  required string cparam = 13;     // 合作方自定义参数
+  required string sign = 14;
+}
+
+// onesdk支付通知对象
+message OnesdkCharge {
+	required string appOrder = 1;   // 游戏订单号，全局唯一
+	required string userIdentity = 2;
+	required int64 appId = 3;
+	required int64 generalOrder = 4;
+	required int64 t = 5;
+	required int32 amount = 6;
+	required string payStatus = 7;
+	required string agent = 8;
+	required string agentId = 9;
+	optional string agentOrder = 10;
+	required int32 bookAmount = 11;
+	optional int32 serverId = 12;
+	optional string ext = 13;
+	required string sign = 14;
+	optional string supplement = 15;
+}

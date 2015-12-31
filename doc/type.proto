@@ -1,0 +1,54 @@
+package sockethttpconvert.pb;
+
+option java_package = "com.xgama.sockethttpconvert.pb";
+option java_outer_classname = "TypeClass";
+
+enum Type {
+	
+	LAOHU_USER = 1;
+	JY_USER = 2;
+	DL_USER = 3;
+	QH_USER = 4;
+	PP_USER = 5;
+	UC_USER = 6;
+	XM_USER = 7;
+	WDJ_USER = 8;
+	TBT_USER = 9;
+	BDDK_USER = 10;
+	AZ_USER = 11;
+	KY_USER = 12;
+	ITOOLS_USER = 15;
+	ONESDK_USER = 18;
+	USER_VALIDATE_RESULT = 100;
+	
+	LAOHU_CHARGE = 101;
+	JY_CHARGE = 102;
+	DL_CHARGE = 103;
+	QH_CHARGE = 104;
+	PP_CHARGE = 105;
+	UC_CHARGE = 106;
+	XM_CHARGE = 107;
+	WDJ_CHARGE = 108;
+	TBT_CHARGE = 109;
+	BDDK_CHARGE = 110;
+	AZ_CHARGE = 111;
+	TM_CHARGE = 112;
+	KY_CHARGE = 113;
+	ITOOLS_CHARGE = 118;
+	YY_CHARGE = 119;
+	ONESDK_CHARGE = 124;
+	CHARGE_RESULT = 200;
+	
+	QH_GET_USER = 201;
+	QH_GET_USER_RESULT = 202;
+	QH_REFRESH_TOKEN = 203;
+	QH_REFRESH_TOKEN_RESULT = 204;
+
+	GOOGLE_PAY = 221;
+	GOOGLE_PAY_CHARGE = 222;
+	
+	APPLE_CHARGE = 301;
+	APPLE_CHARGE_RESULT = 400;
+
+	HEARTBEAT = 500;
+}
