@@ -8,10 +8,6 @@ public class Constants {
 
 	public static PropertiesUtil propertiesUtil = PropertiesUtil.newInstance("/platform.properties");
 	/**
-	 * LH用户验证api
-	 */
-	public static String laohuUserValidateUrl = propertiesUtil.getValue("laohu.validate.url");
-	/**
 	 * LH用户验证新api
 	 */
 	public static String laohuNewUserValidateUrl = propertiesUtil.getValue("laohu.new.validate.url");

@@ -48,13 +48,6 @@ import org.slf4j.LoggerFactory;
 
 import com.xgama.sockethttpconvert.config.Constants;
 
-/**
- * @description
- * @author mrt_soul
- * @E-mail: tianbenzhen@wanmei.com
- * @date：2012-4-9 下午03:15:34
- */
-
 public class HttpClientUtil {
 	
 	private final static Logger logger = LoggerFactory.getLogger(HttpClientUtil.class);
